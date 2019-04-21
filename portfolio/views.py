@@ -99,7 +99,7 @@ def stock_new(request):
 def stock_edit(request, pk):
     stock = get_object_or_404(Stock, pk=pk)
     if request.method == "POST":
-        form = InvestmentForm(request.POST, instance=stock)
+        form = StockForm(request.POST, instance=stock)
         if form.is_valid():
             stock = form.save()
             # stock.customer = stock.id
