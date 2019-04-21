@@ -115,8 +115,8 @@ def stock_edit(request, pk):
 
 @login_required()
 def stock_delete(request, pk):
-    customer = get_object_or_404(Customer, pk=pk)
-    customer.delete()
+    stock = get_object_or_404(Stock, pk=pk)
+    stock.delete()
     return redirect('portfolio:stock_list')
 
 
@@ -134,7 +134,7 @@ def investment_new(request):
             investment = form.save(commit=False)
             investment.created_date = timezone.now()
             investment.save()
-            investment = investment.objects.filter(recent_date__lte=timezone.now())
+            investment = Investment.objects.filter(recent_date__lte=timezone.now())
             return render(request, 'portfolio/investment_list.html',
                           {'investments': investment})
     else:
@@ -163,7 +163,7 @@ def investment_edit(request, pk):
 
 @login_required()
 def investment_delete(request, pk):
-    investment = get_object_or_404(Customer, pk=pk)
+    investment = get_object_or_404(Investment, pk=pk)
     investment.delete()
     return redirect('portfolio:investment_list')
 
