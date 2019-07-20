@@ -157,8 +157,8 @@ LOGOUT_REDIRECT_URL = '/home'
 
 #EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 #EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = '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'
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_HOST_USER = 'postmaster@sandboxd0e30d4df03f43abbaa6b5a825ce804d.mailgun.org'
+EMAIL_HOST_PASSWORD = '1639db3e834456719606a701d7a27c2e-fd0269a6-1be1f292'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
