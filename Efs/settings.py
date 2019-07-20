@@ -155,10 +155,10 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 LOGIN_REDIRECT_URL = '/home'
 LOGOUT_REDIRECT_URL = '/home'
 
-EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
-EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
+#EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+#EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
 EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'sendgrid_apikey'
-EMAIL_HOST_PASSWORD = 'sendgrid_SG.cQYgcpuSRaeXTgdr7bAHPQ.2PDbj2tnKtUQgpj_Bx_lm-PGxWnRCS3nhYQCNqLZOjk'
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = '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'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
